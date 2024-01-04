@@ -35,7 +35,7 @@ def relatorio(df,path_d,aba,codigocol = 'COD_CLIENTE',urlcol = 'URL',tam = 0,tem
             cont2 += 1
             url = Clientes_df.loc[Clientes_df[codigocol] == codigo,urlcol].values[0]
             site = f"https://hub.xpi.com.br/new/posicao-consolidada/#/{url}"
-            navegador.get(site)
+            aba.get(site)
             achoucod = 0
             travou = 1
             for t in range(0,tempowait):
