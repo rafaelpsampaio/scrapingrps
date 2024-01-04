@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='scrapingrps',
-    version='0.1',
+    version='0.2',
     author='Rafael Perroud Sampaio',
     author_email='rafapsampaio@gmail.com',
     description='Scraping interno',

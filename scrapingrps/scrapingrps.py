@@ -7,7 +7,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 
-def relatorio(df,path_d,codigocol = 'COD_CLIENTE',urlcol = 'URL',aba,tam = 0,tempowait_download = 3000):
+def relatorio(df,path_d,aba,codigocol = 'COD_CLIENTE',urlcol = 'URL',tam = 0,tempowait_download = 3000):
     tempowait = 300
     aba.get("https://hub.xpi.com.br/new/dashboard/#/performance")
     if tam == 0:
@@ -81,12 +81,15 @@ def relatorio(df,path_d,codigocol = 'COD_CLIENTE',urlcol = 'URL',aba,tam = 0,tem
             else:
                 print(f"Download {codigo} completo! {cont2} / {tot} ({round((cont2/len(clifaltando))*100,1)}%)). Estimativa de tempo restante: {estimated_time_remaining:.0f} segundos.")
     return clierro
-def navegacao(d_path):
-    chrome_options = Options()
-    prefs = {'download.default_directory': d_path}
-    chrome_options.add_experimental_option('prefs', prefs)
+def navegacao(d_path = None):
     service = Service(ChromeDriverManager().install())
-    d = webdriver.Chrome(service=service, options=chrome_options)
+    if d_path is None:
+        d = webdriver.Chrome(service=service)
+    else:
+        chrome_options = Options()
+        prefs = {'download.default_directory': d_path}
+        chrome_options.add_experimental_option('prefs', prefs)
+        d = webdriver.Chrome(service=service, options=chrome_options)
     return d
 def hub(aba,login,senha):
     url = 'https://hub.xpi.com.br/dashboard/#/performance'
