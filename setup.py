@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='scrapingrps',
-    version='0.3',
+    version='0.4',
     author='Rafael Perroud Sampaio',
     author_email='rafapsampaio@gmail.com',
     description='Scraping interno',
@@ -13,7 +13,8 @@ setup(
     install_requires=[
         'selenium',
         'pandas',
-        'webdriver_manager'
+        'webdriver_manager',
+        'sqlalchemy'
     ],
     classifiers=[
         'Programming Language :: Python :: 3',
