@@ -528,3 +528,4 @@ def verificar_icone(linha, seletor_icone):
         return True if icone else False
     except:
         return False
+
