@@ -23,7 +23,7 @@ def relatorio(df,path_d,aba,codigocol = 'COD_CLIENTE',urlcol = 'URL',tam = 0,tem
     Clientes_df = df.loc[:tam-1].copy()
     if 'Patrimônio XP' in Clientes_df.columns:
         Clientes_df.sort_values(by = 'Patrimônio XP', ascending = False, inplace = True)
-    for cliente in Clientes_df['COD_CLIENTE'].unique().tolist():
+    for cliente in Clientes_df[codigocol].unique().tolist():
         achou = 0
         filename_loc = f"XPerformance - {cliente}"
         for filename in os.listdir(path_d):
