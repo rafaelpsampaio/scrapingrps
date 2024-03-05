@@ -59,9 +59,8 @@ def relatorio(df,path_d,aba,codigocol = 'COD_CLIENTE',urlcol = 'URL',tam = 0,tem
                     travou = 1
                 else:
                     try:
-                        botaojs(aba,"#root > arsenal-loader > div > div > div.sc-eWHaVC.cPtGvU > soma-grid > soma-grid-row:nth-child(5) > soma-grid-col > soma-coachmark > soma-coachmark-highlight > soma-card > div.sc-iXzfSG.eRBiOJ > div.sc-iapWAC.dmTHUX > soma-button.sc-dPZUQH.kOsIJG.soma-button.primary.sm.hydrated').shadowRoot.querySelector('button')")
-                        botaojs(aba,"#root > arsenal-loader > div > div > div.sc-eWHaVC.cPtGvU > soma-grid > soma-grid-row:nth-child(5) > soma-grid-col > soma-coachmark > soma-coachmark-highlight > soma-card > div.sc-iXzfSG.eRBiOJ > div.sc-iapWAC.dmTHUX > div.sc-eyvILC.SVORC > soma-modal > div > div.sc-hHOBiw.jKtwMT > soma-button').shadowRoot.querySelector('button')")
-                        botaojs(aba,"#root > arsenal-loader > div > div > div.sc-eWHaVC.cPtGvU > soma-grid > soma-grid-row:nth-child(5) > soma-grid-col > soma-coachmark > soma-coachmark-highlight > soma-card > div.sc-iXzfSG.eRBiOJ > div.sc-iapWAC.dmTHUX > div.sc-eyvILC.SVORC > soma-modal > div > div.sc-hHOBiw.jKtwMT > div.sc-kzqdkY.iJmwrk > soma-button.soma-button.primary.md.hydrated').shadowRoot.querySelector('button')")
+                        botaojs(aba,"#root > arsenal-loader > div > div > div.sc-heIBml.dECqlF > soma-grid > soma-grid-row:nth-child(5) > soma-grid-col > soma-coachmark > soma-coachmark-highlight > soma-card > div.sc-lnPyaJ.dwtKZE > div.sc-kqGoIF.dgPowr > soma-button.sc-eBHhsj.boPyWa.soma-button.primary.sm.hydrated').shadowRoot.querySelector('button')")
+                        botaojs(aba,"#root > arsenal-loader > div > div > div.sc-heIBml.dECqlF > soma-grid > soma-grid-row:nth-child(5) > soma-grid-col > soma-coachmark > soma-coachmark-highlight > soma-card > div.sc-lnPyaJ.dwtKZE > div.sc-kqGoIF.dgPowr > div.sc-eyvILC.SVORC > soma-modal > div > div.sc-kWtpeL.lcfPlf > div > soma-button').shadowRoot.querySelector('button')")
                     except:
                         print('Erro botões')
                         travou = 1
